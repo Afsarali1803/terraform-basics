@@ -34,5 +34,5 @@ output "list_print" {
 }
 
 output "lits_print" {
-  value="The value is first two ${var.list[0]}  ${var.list[1]} the value of last two ${var.list[-2]} ${var.list[-1]}"
+  value="The value is first two ${var.list[0]}  ${var.list[1]} the value of last two ${var.list[4]} ${var.list[5]}"
 }
