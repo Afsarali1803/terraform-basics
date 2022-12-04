@@ -7,7 +7,7 @@ output "print-output" {
 }
 
 output "stmt" {
-  value = "The value needs to print $(var.sample)"
+  value = "The value needs to print ${var.sample}"
 }
 
 variable "numneric" {
@@ -15,5 +15,5 @@ variable "numneric" {
 }
 
 output "out-numeric" {
-  value = "The value of numeric is $(var.numneric)"
+  value = "The value of numeric is ${var.numneric}"
 }
