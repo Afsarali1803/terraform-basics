@@ -36,3 +36,19 @@ output "list_print" {
 output "lits_print" {
   value="The value is first two ${var.list[0]}  ${var.list[1]} the value of last two ${var.list[4]} ${var.list[5]}"
 }
+
+# Map Variable 
+
+variable "ex-map" {
+    default = {
+        Duration = 105 
+        Timing   = "0730AMIST"
+        BATCH    = 51 
+        
+    }
+  
+}
+
+output "ex-map" {
+  value = "The value is first two ${var.ex-map[0]}" 
+}
