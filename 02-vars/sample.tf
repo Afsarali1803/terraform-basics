@@ -32,3 +32,7 @@ variable "list" {
 output "list_print" {
   value = var.list
 }
+
+output "lits_print" {
+  value="The value is first two ${var.list[0]}  ${var.list[1]} the value of last two ${var.list[-2]} ${var.list[-1]}"
+}
