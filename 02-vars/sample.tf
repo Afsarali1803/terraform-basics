@@ -50,5 +50,5 @@ variable "ex-map" {
 }
 
 output "ex-map" {
-  value = "The value is first two ${var.ex-map[0]}" 
+  value = "The value is first two ${var.ex-map}" 
 }
