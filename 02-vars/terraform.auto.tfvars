@@ -1,2 +1,1 @@
 NAME = "Anas1995"
-//DAUGHTER = "Rida2022"
