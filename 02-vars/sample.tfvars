@@ -1,1 +1,1 @@
-tfvars = "Anas birthday"
+name = "Anas birthday"
