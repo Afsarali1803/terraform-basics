@@ -1,1 +1,2 @@
-name = "Anas birthday"
+NAME = "Anas"
+DAUGHTER = "Rida"
