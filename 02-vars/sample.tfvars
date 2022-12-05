@@ -12,5 +12,5 @@ variable "list" {
 
 
 variable "numneric" {
-  default = 100
+  default = 101
 }
