@@ -1,4 +1,4 @@
-resource "aws_instance" "this" {
+resource "aws_instance" "that" {
   ami                       = "ami-0b0dcb5067f052a63"
   instance_type             = "t2.micro"
   security_groups           =  [aws_security_group.allow_tls.id]
@@ -9,11 +9,11 @@ resource "aws_instance" "this" {
 }
 
 output "private_ip" {
-  value = aws_instance.this.private_ip
+  value = aws_instance.that.private_ip
 }
 
 output "private_dns" {
-    value = aws_instance.this.private_dns 
+    value = aws_instance.that.private_dns 
 }
 
 resource "aws_security_group" "allow_tls" {
