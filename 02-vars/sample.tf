@@ -55,3 +55,9 @@ variable "ex-map" {
 output "ex-map" {
   value = "The value is first two ${var.ex-map["Duration"]} and  ${var.ex-map["BATCH"]}"
 }
+
+variable "tfvars" {}
+
+output "out-tfvars" {
+  value = "The value of tfvars ${var.tfvars}"
+}
