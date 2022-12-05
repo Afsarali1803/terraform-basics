@@ -1,0 +1,2 @@
+NAME = "Anas"
+DAUGHTER = "Rida"
