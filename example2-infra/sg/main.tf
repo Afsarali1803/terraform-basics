@@ -1,5 +1,5 @@
 # Creates Security Group
-resource "aws_security_group" "allow_ssh" {
+resource "aws_security_group" "allow_ssh1" {
   name        = "allow_ssh"
   description = "Allow SSH inbound traffic"
 
@@ -33,5 +33,5 @@ resource "aws_security_group" "allow_ssh" {
 }
 
 output "sgid" {
-    value = aws_security_group.allow_ssh.id
+    value = aws_security_group.allow_ssh1.id
 }
