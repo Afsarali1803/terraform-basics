@@ -1,21 +1,3 @@
-resource "aws_instance" "that" {
-  ami                       = "ami-0b0dcb5067f052a63"
-  instance_type             = "t2.micro"
-  vpc_security_group_ids     = [aws_security_group.allow_ssh.id]
-
-  tags = {
-    Name = "Helloworld1"
-  }
-}
-
-output "private_ip" {
-  value = aws_instance.that.private_ip
-}
-
-output "private_dns" {
-    value = aws_instance.that.private_dns 
-}
-
 # Creates Security Group
 resource "aws_security_group" "allow_ssh" {
   name        = "allow_ssh"
@@ -48,4 +30,8 @@ resource "aws_security_group" "allow_ssh" {
   tags = {
     Name = "allow_SSH"
   }
+}
+
+output "sg" {
+    value = aws_security_group.allow_ssh.id
 }
