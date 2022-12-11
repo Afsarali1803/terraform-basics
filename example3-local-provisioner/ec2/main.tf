@@ -12,7 +12,7 @@ resource "aws_instance" "app" {
   }
   provisioner "remote-exec" {
      inline = [
-       "ansible-pull -U https://github.com/Afsarali1803/ansible.git  -e ansible_user=centos -e ansible_password=DevOps321 2.sample.yaml"
+       "ansible-pull -U https://github.com/Afsarali1803/ansible.git  i inv -e ansible_user=centos -e ansible_password=DevOps321 2.sample.yaml"
      ]
     # command = <<EOF
     # cd /home/centos/ansible
