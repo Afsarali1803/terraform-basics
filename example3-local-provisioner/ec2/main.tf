@@ -4,12 +4,12 @@ resource "aws_instance" "app" {
   instance_type              = "t3.micro"
   vpc_security_group_ids     = [var.sg]
 
-  connection {
-    type     = "ssh"
-    user     = "centos"
-    password = "DevOps321"
-    host     = self.private_ip
-  }
+  # connection {
+  #   type     = "ssh"
+  #   user     = "centos"
+  #   password = "DevOps321"
+  #   host     = self.private_ip
+  # }
 
   provisioner "local-exec" {
     # inline = [
@@ -18,7 +18,6 @@ resource "aws_instance" "app" {
     command = <<EOF
     cd /home/centos/ansible
     ansible-playbook -i self.private_ip -e ansible_user=centos -e ansible_password=DevOps321 2.sample.yaml
-
     EOF
   }
 
