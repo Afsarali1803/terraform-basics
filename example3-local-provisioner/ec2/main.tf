@@ -11,10 +11,15 @@ resource "aws_instance" "app" {
     host     = self.private_ip
   }
 
-  provisioner "remote-exec" {
-    inline = [
-      "ansible-pull -U https://github.com/Afsarali1803/ansible.git -e ansible_user=centos -e ansible_password=DevOps321 2.sample.yaml"
-    ]
+  provisioner "local-exec" {
+    # inline = [
+    #   "ansible-pull -U https://github.com/Afsarali1803/ansible.git -e ansible_user=centos -e ansible_password=DevOps321 2.sample.yaml"
+    # ]
+    command = <<EOF
+    cd /home/centos/ansible
+    ansible-playbook -i self.private_ip -e ansible_user=centos -e ansible_password=DevOps321 2.sample.yaml
+
+    EOF
   }
 
 }
